@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_meeting_app/utils/app_pages.dart';
-import 'package:flutter_meeting_app/utils/app_routes.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
+
+
+import 'app_barrels.dart';
 
 void main() {
   runApp(const MyApp());

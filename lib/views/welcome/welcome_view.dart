@@ -1,8 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_meeting_app/constants/app_images.dart';
-import 'package:flutter_meeting_app/constants/app_colors.dart';
-import 'package:flutter_meeting_app/widgets/app_button.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
+import '../../app_barrels.dart';
 
 class WelcomeView extends StatelessWidget {
   const WelcomeView({super.key});
