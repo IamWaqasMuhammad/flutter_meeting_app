@@ -1,4 +1,3 @@
-
 import '../app_barrels.dart';
 
 class CustomButton extends StatelessWidget {
@@ -9,6 +8,8 @@ class CustomButton extends StatelessWidget {
   final BoxShape boxShape;
   final Widget child;
   final void Function()? onTap;
+  final Color? splashColor;
+  final Color? highlightedColor;
 
   const CustomButton({
     super.key,
@@ -23,7 +24,10 @@ class CustomButton extends StatelessWidget {
     this.boxShadow,
     this.gradient,
     this.boxShape = BoxShape.rectangle,
+    this.splashColor,
+    this.highlightedColor
   });
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +36,8 @@ class CustomButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(radius),
       child: InkWell(
         onTap: onTap,
-        splashColor: Colors.white.withOpacity(0.2),
-        highlightColor: Colors.white.withOpacity(0.1),
+        splashColor: splashColor,
+        highlightColor: highlightedColor,
         borderRadius: BorderRadius.circular(radius),
         child: Container(
           height: height,
@@ -41,10 +45,7 @@ class CustomButton extends StatelessWidget {
           decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.circular(radius),
-            border: Border.all(
-              color: borderColor,
-              width: borderWidth,
-            ),
+            border: Border.all(color: borderColor, width: borderWidth),
             boxShadow: boxShadow,
             gradient: gradient,
             shape: boxShape,

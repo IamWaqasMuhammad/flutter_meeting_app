@@ -1,5 +1,3 @@
-
-
 import '../../app_barrels.dart';
 
 class WelcomeView extends StatelessWidget {
@@ -15,11 +13,7 @@ class WelcomeView extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Image.asset(
-                  AppImages.appLogo,
-                  height: 153.h,
-                  width: 152.w,
-                ),
+                Image.asset(AppImages.appLogo, height: 153.h, width: 152.w),
                 SizedBox(height: 10.h),
                 Text(
                   'Connects, Collaborate, Conquer',
@@ -35,7 +29,6 @@ class WelcomeView extends StatelessWidget {
             ),
           ),
 
-          // Bottom buttons
           Align(
             alignment: Alignment.bottomCenter,
             child: Padding(
@@ -44,30 +37,46 @@ class WelcomeView extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   CustomButton(
-                    height: 46.h,
-                    width: double.infinity,
+                    height: 65.h,
+                    width: MediaQuery.of(context).size.width,
                     color: AppColors.primary,
-                    onTap: (){},
-                    child: Center(child: Text('Sign Up',style: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: AppColors.neutralFFFFFF,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w700,
-                    ),)),
+                    splashColor: Colors.white.withOpacity(0.2),
+                    highlightedColor: Colors.white.withOpacity(0.1),
+                    onTap: () {},
+                    child: Center(
+                      child: Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: AppColors.neutralFFFFFF,
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
                   ),
                   SizedBox(height: 10.h),
                   CustomButton(
-                    height: 46.h,
-                    width: double.infinity,
+                    height: 65.h,
+                    width: MediaQuery.of(context).size.width,
                     borderColor: AppColors.primary,
                     borderWidth: 2,
-                    onTap: (){},
-                    child: Center(child: Text('Log In',style: TextStyle(
-                      fontFamily: 'Poppins',
-                      color: AppColors.darkPrimary,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w700,
-                    ),)),
+                    splashColor: Colors.white.withOpacity(0.2),
+                    highlightedColor: Colors.white.withOpacity(0.1),
+                    onTap: () {
+                      Get.offNamed(AppRoutes.login);
+                    },
+                    child: Center(
+                      child: Text(
+                        'Log In',
+                        style: TextStyle(
+                          fontFamily: 'Poppins',
+                          color: AppColors.darkPrimary,
+                          fontSize: 18.sp,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),

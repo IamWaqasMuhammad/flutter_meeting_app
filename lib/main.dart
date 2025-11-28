@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
       designSize: const Size(390, 844), //figma design size
       minTextAdapt: true,
       splitScreenMode: true,
-      // Use builder only if you need to use library outside ScreenUtilInit context
       builder: (_, child) {
         return GetMaterialApp(
           title: 'Smart Meeting App',
