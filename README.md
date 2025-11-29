@@ -1,4 +1,4 @@
-# flutter_meeting_appn
+# flutter_meeting_app
 
 A new Flutter project.
 
