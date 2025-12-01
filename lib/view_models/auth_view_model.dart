@@ -1,17 +1,16 @@
 import 'package:flutter_meeting_app/app_barrels.dart';
 
 class LoginController extends GetxController {
-  /// Form key 
+  /// Form key
   final formKey = GlobalKey<FormState>();
 
   /// Text controllers
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
-  final confirmPasswordController =
-      TextEditingController(); 
+  final confirmPasswordController = TextEditingController();
 
   /// Toggle Eye button
-  var isVisibleText = false.obs;
+  var isVisibleText = true.obs;
 
   void toggleVisibilty() {
     isVisibleText.value = !isVisibleText.value;
@@ -31,7 +30,6 @@ class LoginController extends GetxController {
     bool termsAccepted = isAccepted.value;
 
     if (!isFormValid && !termsAccepted) {
-      
       Get.showSnackbar(
         GetSnackBar(
           message:

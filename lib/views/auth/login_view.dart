@@ -1,5 +1,3 @@
-
-
 import '../../app_barrels.dart';
 
 class LoginView extends StatelessWidget {
@@ -21,7 +19,7 @@ class LoginView extends StatelessWidget {
             children: [
               SizedBox(height: 60.h),
               Text(
-                'Welcome Back!',
+                'Welcome Back !',
                 style: TextStyle(
                   fontFamily: 'Poppins',
                   color: AppColors.darkPrimary,
@@ -59,16 +57,16 @@ class LoginView extends StatelessWidget {
                       controller: loginController.emailController,
                       hintText: 'Enter your email address',
                       borderColor: AppColors.darkContent,
-                      borderRadius: 10,
-                      borderWidth: 1,
+                      borderRadius: 10.r,
+                      borderWidth: 1.w,
                       cursorColor: AppColors.darkPrimary,
-                      cursorRadius: Radius.circular(6),
-                      cursorWidth: 2,
+                      cursorRadius: Radius.circular(6.r),
+                      cursorWidth: 2.w,
                       enableBorderColor: AppColors.darkContent,
-                      enableBorderRadius: 10,
+                      enableBorderRadius: 10.r,
                       enabled: true,
                       focusBorderColor: AppColors.darkPrimary,
-                      focusBorderRadius: 10,
+                      focusBorderRadius: 10.r,
                       fillColor: AppColors.neutral868686,
                       obscureText: false,
                       textInputType: TextInputType.emailAddress,
@@ -76,7 +74,7 @@ class LoginView extends StatelessWidget {
                       onValid: Validator.validateEmail,
                       hintTextStyle: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 18,
+                        fontSize: 18.sp,
                         color: AppColors.neutralCECECE,
                         fontWeight: FontWeight.w400,
                       ),
@@ -102,20 +100,20 @@ class LoginView extends StatelessWidget {
                         cursorColor: AppColors.darkPrimary,
                         cursorRadius: Radius.circular(6),
                         cursorWidth: 2,
-                        suffixIcon: CustomButton(
-                          onTap: loginController.toggleVisibilty,
-                          child: Icon(
+                        suffixIcon: IconButton(
+                          onPressed: loginController.toggleVisibilty,
+                          icon: Icon(
                             loginController.isVisibleText.value
-                                ? Icons.visibility
-                                : Icons.visibility_off,
+                                ? Icons.visibility_off
+                                : Icons.visibility,
                             color: AppColors.darkPrimary,
                           ),
                         ),
                         enableBorderColor: AppColors.darkContent,
-                        enableBorderRadius: 10,
+                        enableBorderRadius: 10.r,
                         enabled: true,
                         focusBorderColor: AppColors.darkPrimary,
-                        focusBorderRadius: 10,
+                        focusBorderRadius: 10.r,
                         fillColor: AppColors.neutral868686,
                         obscureText: loginController.isVisibleText.value,
                         textInputType: TextInputType.visiblePassword,
@@ -123,7 +121,7 @@ class LoginView extends StatelessWidget {
                         onValid: Validator.validatePassword,
                         hintTextStyle: TextStyle(
                           fontFamily: 'Poppins',
-                          fontSize: 18,
+                          fontSize: 18.sp,
                           color: AppColors.neutralCECECE,
                           fontWeight: FontWeight.w400,
                         ),
